@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiziz по госконтролю</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <main class="app-shell">
+      <header class="hero">
+        <p class="hero-kicker">Русский набор вопросов</p>
+        <h1>Квиз по государственному контролю за использованием земель</h1>
+        <p class="hero-text">
+          Простой локальный сайт в стиле Quizizz: один вопрос и четыре варианта ответа.
+          Вопросы взяты из вашего документа, казахская часть исключена.
+        </p>
+      </header>
+
+      <section class="quiz-card">
+        <div id="start-screen" class="screen active">
+          <div class="screen-badge">Старт</div>
+          <h2>Готово к запуску</h2>
+          <p class="screen-text">
+            Внутри собраны русские вопросы, а к каждому правильному ответу автоматически
+            добавлены 3 неправильных варианта.
+          </p>
+
+          <div class="stats-grid">
+            <article class="stat-box">
+              <span class="stat-label">Вопросов</span>
+              <strong id="question-count">0</strong>
+            </article>
+            <article class="stat-box">
+              <span class="stat-label">Формат</span>
+              <strong>4 ответа</strong>
+            </article>
+            <article class="stat-box">
+              <span class="stat-label">Правильный</span>
+              <strong>1 вариант</strong>
+            </article>
+          </div>
+
+          <button id="start-button" class="primary-button" type="button">
+            Начать квиз
+          </button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+          <div class="quiz-topbar">
+            <div>
+              <p class="topbar-label">Прогресс</p>
+              <strong id="progress-text">Вопрос 1 из 1</strong>
+            </div>
+            <div class="score-pill">
+              <span>Очки</span>
+              <strong id="score-text">0</strong>
+            </div>
+          </div>
+
+          <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+
+          <article class="question-panel">
+            <p class="question-hint">Выберите один правильный ответ</p>
+            <h2 id="question-text" class="question-text"></h2>
+          </article>
+
+          <div id="answers-grid" class="answers-grid"></div>
+
+          <div class="quiz-footer">
+            <p id="feedback-text" class="feedback-text"></p>
+            <button id="next-button" class="primary-button ghost" type="button" disabled>
+              Следующий вопрос
+            </button>
+          </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+          <div class="screen-badge">Результат</div>
+          <h2 id="result-title">Квиз завершён</h2>
+          <p id="result-summary" class="screen-text"></p>
+          <button id="restart-button" class="primary-button" type="button">
+            Пройти ещё раз
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <noscript>Для работы квиза нужно включить JavaScript.</noscript>
+    <script src="script.js"></script>
+  </body>
+</html>
